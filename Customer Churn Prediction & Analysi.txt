@@ -1,0 +1,9 @@
+Customer Churn Prediction & Analysis
+aims 
+To develop and evaluate a machine learning–based system that predicts customers who are likely to churn using behavioral and demographic data.
+
+
+
+
+ open juypter notebook
+https://www.anaconda.com/download
