@@ -7,3 +7,8 @@ To develop and evaluate a machine learning–based system that predicts customer
 
  open juypter notebook
 https://www.anaconda.com/download
+
+ run command for uploading file on GitHub 
+git add .
+git commit -m "Describe what you changed"
+git push
