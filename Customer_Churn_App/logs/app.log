@@ -1,0 +1,251 @@
+2026-03-25 20:26:47,140 - INFO - App started
+2026-03-25 20:33:22,326 - INFO - App started
+2026-03-25 20:33:22,461 - ERROR - Error occurred: name 'data' is not defined
+2026-03-25 20:35:45,068 - INFO - App started
+2026-03-25 20:35:45,152 - ERROR - Error occurred: name 'data' is not defined
+2026-03-25 20:39:25,726 - INFO - App started
+2026-03-25 20:39:25,759 - ERROR - Error occurred: name 'data' is not defined
+2026-03-25 20:39:30,457 - INFO - App started
+2026-03-25 20:39:30,462 - ERROR - Error occurred: name 'data' is not defined
+2026-03-25 20:42:49,169 - INFO - App started
+2026-03-25 20:43:07,873 - INFO - App started
+2026-03-25 20:43:07,947 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-25 20:43:07,952 - INFO - Prediction made: 0, Probability: 0.19192534905267022
+2026-03-25 20:43:11,656 - INFO - App started
+2026-03-25 20:43:14,557 - INFO - App started
+2026-03-25 20:43:14,665 - INFO - App started
+2026-03-25 20:43:19,687 - INFO - App started
+2026-03-25 20:43:19,717 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-25 20:43:19,723 - INFO - Prediction made: 0, Probability: 0.19192534905267022
+2026-03-25 20:50:27,867 - INFO - App started
+2026-03-25 20:50:28,064 - INFO - Prediction: 1, Probability: 0.8681913221524473
+2026-03-25 20:50:28,071 - INFO - Prediction made: 1, Probability: 0.8681913221524473
+2026-03-25 20:50:46,427 - INFO - App started
+2026-03-25 20:50:46,455 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-25 20:50:46,465 - INFO - Prediction made: 0, Probability: 0.19192534905267022
+2026-03-25 20:52:30,783 - INFO - App started
+2026-03-25 20:52:30,797 - INFO - Prediction: 1, Probability: 0.8681913221524473
+2026-03-25 20:52:30,803 - INFO - Prediction made: 1, Probability: 0.8681913221524473
+2026-03-25 20:54:33,922 - INFO - App started
+2026-03-25 20:54:33,938 - INFO - Prediction: 1, Probability: 0.8681913221524473
+2026-03-25 20:54:33,941 - INFO - Prediction made: 1, Probability: 0.8681913221524473
+2026-03-25 20:54:42,107 - INFO - App started
+2026-03-25 20:54:42,131 - INFO - Prediction: 1, Probability: 0.8681913221524473
+2026-03-25 20:54:42,136 - INFO - Prediction made: 1, Probability: 0.8681913221524473
+2026-03-25 20:55:05,687 - INFO - App started
+2026-03-25 20:55:05,727 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-25 20:55:05,729 - INFO - Prediction made: 0, Probability: 0.19192534905267022
+2026-03-25 20:55:33,714 - INFO - App started
+2026-03-25 20:55:33,731 - INFO - Prediction: 1, Probability: 0.8681913221524473
+2026-03-25 20:55:33,738 - INFO - Prediction made: 1, Probability: 0.8681913221524473
+2026-03-25 21:00:58,920 - INFO - App started
+2026-03-25 21:01:16,608 - INFO - App started
+2026-03-25 21:01:16,623 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-25 21:01:20,160 - INFO - App started
+2026-03-25 21:01:23,289 - INFO - App started
+2026-03-25 21:01:23,375 - INFO - App started
+2026-03-25 21:03:54,208 - INFO - App started
+2026-03-27 13:23:12,340 - INFO - App started
+2026-03-27 13:38:49,071 - INFO - App started
+2026-03-27 13:38:49,119 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-27 13:39:06,852 - INFO - App started
+2026-03-27 13:41:50,900 - INFO - App started
+2026-03-29 14:41:43,620 - INFO - App started
+2026-03-29 15:27:15,013 - INFO - App started
+2026-03-29 15:31:01,137 - INFO - App started
+2026-03-29 15:31:17,402 - INFO - App started
+2026-03-29 15:31:17,473 - INFO - Prediction: 0, Probability: 0.19192534905267022
+2026-03-30 15:34:12,467 - INFO - App started
+2026-03-30 15:34:12,473 - INFO - Session started: 2026-03-30 15:34:12.470214
+2026-03-30 15:34:59,827 - INFO - App started
+2026-03-30 15:34:59,828 - INFO - Session started: 2026-03-30 15:34:12.470214
+2026-03-30 15:34:59,880 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 15:34:59,880 - INFO - Execution Time: 0.029793500900268555
+2026-03-30 15:35:22,651 - INFO - App started
+2026-03-30 15:35:22,652 - INFO - Session started: 2026-03-30 15:34:12.470214
+2026-03-30 15:35:26,543 - INFO - App started
+2026-03-30 15:35:26,544 - INFO - Session started: 2026-03-30 15:34:12.470214
+2026-03-30 15:35:26,680 - INFO - App started
+2026-03-30 15:35:26,680 - INFO - Session started: 2026-03-30 15:35:26.680710
+2026-03-30 15:47:27,022 - INFO - App started
+2026-03-30 15:47:27,031 - INFO - Session started: 2026-03-30 15:47:27.025855
+2026-03-30 15:47:39,736 - INFO - App started
+2026-03-30 15:47:39,737 - INFO - Session started: 2026-03-30 15:47:27.025855
+2026-03-30 15:47:39,813 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 15:47:39,814 - INFO - Execution Time: 0.05505943298339844
+2026-03-30 15:47:51,637 - INFO - App started
+2026-03-30 15:47:51,637 - INFO - Session started: 2026-03-30 15:47:27.025855
+2026-03-30 15:47:51,795 - INFO - App started
+2026-03-30 15:47:51,795 - INFO - Session started: 2026-03-30 15:47:51.795249
+2026-03-30 15:53:08,841 - INFO - App started
+2026-03-30 15:53:08,841 - INFO - Session started: 2026-03-30 15:53:08.841798
+2026-03-30 15:53:44,838 - INFO - App started
+2026-03-30 15:53:44,838 - INFO - Session started: 2026-03-30 15:53:08.841798
+2026-03-30 15:53:44,868 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 15:53:44,869 - INFO - Execution Time: 0.005894184112548828
+2026-03-30 15:53:50,839 - INFO - App started
+2026-03-30 15:53:50,839 - INFO - Session started: 2026-03-30 15:53:08.841798
+2026-03-30 15:53:51,051 - INFO - App started
+2026-03-30 15:53:51,052 - INFO - Session started: 2026-03-30 15:53:51.051829
+2026-03-30 15:55:10,626 - INFO - App started
+2026-03-30 15:55:10,626 - INFO - Session started: 2026-03-30 15:55:10.626434
+2026-03-30 15:55:32,452 - INFO - App started
+2026-03-30 15:55:32,453 - INFO - Session started: 2026-03-30 15:55:10.626434
+2026-03-30 15:55:32,486 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 15:55:32,486 - INFO - Execution Time: 0.010515451431274414
+2026-03-30 15:55:40,956 - INFO - App started
+2026-03-30 15:55:40,956 - INFO - Session started: 2026-03-30 15:55:10.626434
+2026-03-30 16:08:03,930 - INFO - App started
+2026-03-30 16:08:03,937 - INFO - Session started: 2026-03-30 16:08:03.936089
+2026-03-30 16:08:20,246 - INFO - App started
+2026-03-30 16:08:20,246 - INFO - Session started: 2026-03-30 16:08:03.936089
+2026-03-30 16:08:20,319 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 16:08:20,319 - INFO - Execution Time: 0.04890012741088867
+2026-03-30 16:08:25,808 - INFO - App started
+2026-03-30 16:08:25,808 - INFO - Session started: 2026-03-30 16:08:03.936089
+2026-03-30 16:08:26,022 - INFO - App started
+2026-03-30 16:08:26,022 - INFO - Session started: 2026-03-30 16:08:03.936089
+2026-03-30 16:15:36,027 - INFO - App started
+2026-03-30 16:15:36,028 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:15:41,274 - INFO - App started
+2026-03-30 16:15:41,275 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:15:44,495 - INFO - App started
+2026-03-30 16:15:44,495 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:15:47,811 - INFO - App started
+2026-03-30 16:15:47,814 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:15:48,013 - INFO - App started
+2026-03-30 16:15:48,014 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:15:48,046 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 16:15:48,046 - INFO - Execution Time: 0.010833740234375
+2026-03-30 16:16:01,117 - INFO - App started
+2026-03-30 16:16:01,117 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 16:16:01,272 - INFO - App started
+2026-03-30 16:16:01,272 - INFO - Session started: 2026-03-30 16:15:36.028582
+2026-03-30 17:04:54,090 - INFO - App started
+2026-03-30 17:04:54,099 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:04:59,392 - INFO - App started
+2026-03-30 17:04:59,392 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:05:03,658 - INFO - App started
+2026-03-30 17:05:03,659 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:05:08,623 - INFO - App started
+2026-03-30 17:05:08,624 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:05:08,820 - INFO - App started
+2026-03-30 17:05:08,821 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:05:08,886 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 17:05:08,886 - INFO - Execution Time: 0.048113107681274414
+2026-03-30 17:05:17,853 - INFO - App started
+2026-03-30 17:05:17,854 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:05:17,998 - INFO - App started
+2026-03-30 17:05:17,999 - INFO - Session started: 2026-03-30 17:04:54.097873
+2026-03-30 17:13:45,711 - INFO - App started
+2026-03-30 17:13:45,721 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:13:50,840 - INFO - App started
+2026-03-30 17:13:50,840 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:13:54,179 - INFO - App started
+2026-03-30 17:13:54,180 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:13:57,632 - INFO - App started
+2026-03-30 17:13:57,632 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:13:57,850 - INFO - App started
+2026-03-30 17:13:57,850 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:13:57,916 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 17:13:57,916 - INFO - Execution Time: 0.04364132881164551
+2026-03-30 17:14:03,030 - INFO - App started
+2026-03-30 17:14:03,030 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:03,129 - INFO - App started
+2026-03-30 17:14:03,130 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:38,562 - INFO - App started
+2026-03-30 17:14:38,563 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:41,678 - INFO - App started
+2026-03-30 17:14:41,678 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:45,376 - INFO - App started
+2026-03-30 17:14:45,376 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:45,599 - INFO - App started
+2026-03-30 17:14:45,599 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:45,619 - INFO - Prediction: 0, Probability: 0.17922853674709163
+2026-03-30 17:14:45,619 - INFO - Execution Time: 0.0029153823852539062
+2026-03-30 17:14:49,907 - INFO - App started
+2026-03-30 17:14:49,907 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:56,415 - INFO - App started
+2026-03-30 17:14:56,415 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 17:14:56,494 - INFO - App started
+2026-03-30 17:14:56,495 - INFO - Session started: 2026-03-30 17:13:45.717662
+2026-03-30 18:11:32,306 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-03-30 18:11:35,392 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-03-30 18:12:44,086 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-03-30 18:14:19,843 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-04-02 13:49:35,051 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-04-02 13:50:24,035 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-04-02 13:59:26,364 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-04-02 16:24:27,323 - ERROR - The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Dependents_Yes
+- DeviceProtection_No internet service
+- DeviceProtection_Yes
+- InternetService_Fiber optic
+- InternetService_No
+- ...
+
+2026-04-02 17:33:31,331 - INFO - Prediction: 0, Probability: 0.09216135237990605
+2026-04-02 18:00:23,059 - INFO - Prediction: 0, Probability: 0.4940666123838392
+2026-04-02 18:05:02,648 - INFO - Prediction: 0, Probability: 0.44311371499020175
+2026-04-02 18:32:24,304 - INFO - Prediction: 0, Probability: 0.023856232006909686
+2026-04-02 22:38:07,506 - INFO - Prediction: 0, Probability: 0.19463920552027075
+2026-04-02 22:42:28,296 - INFO - Prediction: 0, Probability: 0.26907487891442183
+2026-04-02 22:42:44,372 - INFO - Prediction: 0, Probability: 0.34270224587390635
+2026-04-06 10:46:36,623 - INFO - Prediction: 1, Probability: 0.6067875784371489

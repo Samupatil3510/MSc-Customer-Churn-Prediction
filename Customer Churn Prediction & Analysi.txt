@@ -29,3 +29,552 @@ split the data X_train, X_test, y_train, y_test = train_test_split(
 
 print("Training set shape:", X_train.shape)
 print("Testing set shape:", X_test.shape)
+
+
+ app.py code before adding printing button 
+import streamlit as st
+import pandas as pd
+import joblib
+
+# Load trained model
+model = joblib.load("churn_model.pkl")
+
+st.title("Customer Churn Prediction System")
+
+st.write("This application predicts whether a telecom customer is likely to churn using a trained machine learning model.")
+
+st.header("Enter Customer Information")
+
+# User Inputs
+tenure = st.number_input("Customer Tenure (Months)", min_value=0, max_value=100, value=12)
+
+monthly_charges = st.number_input("Monthly Charges", min_value=0.0, value=70.0)
+
+total_charges = st.number_input("Total Charges", min_value=0.0, value=1000.0)
+
+senior_citizen = st.selectbox("Senior Citizen", ["No", "Yes"])
+
+contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
+
+
+# Convert inputs to numeric
+senior_citizen = 1 if senior_citizen == "Yes" else 0
+
+contract_one_year = 1 if contract == "One year" else 0
+contract_two_year = 1 if contract == "Two year" else 0
+
+
+# Create dataframe with 30 features
+input_data = pd.DataFrame({
+    'SeniorCitizen':[senior_citizen],
+    'tenure':[tenure],
+    'MonthlyCharges':[monthly_charges],
+    'TotalCharges':[total_charges],
+    'gender_Male':[0],
+    'Partner_Yes':[0],
+    'Dependents_Yes':[0],
+    'PhoneService_Yes':[1],
+    'MultipleLines_No phone service':[0],
+    'MultipleLines_Yes':[0],
+    'InternetService_Fiber optic':[0],
+    'InternetService_No':[0],
+    'OnlineSecurity_No internet service':[0],
+    'OnlineSecurity_Yes':[0],
+    'OnlineBackup_No internet service':[0],
+    'OnlineBackup_Yes':[0],
+    'DeviceProtection_No internet service':[0],
+    'DeviceProtection_Yes':[0],
+    'TechSupport_No internet service':[0],
+    'TechSupport_Yes':[0],
+    'StreamingTV_No internet service':[0],
+    'StreamingTV_Yes':[0],
+    'StreamingMovies_No internet service':[0],
+    'StreamingMovies_Yes':[0],
+    'Contract_One year':[contract_one_year],
+    'Contract_Two year':[contract_two_year],
+    'PaperlessBilling_Yes':[0],
+    'PaymentMethod_Credit card (automatic)':[0],
+    'PaymentMethod_Electronic check':[0],
+    'PaymentMethod_Mailed check':[0]
+})
+
+
+# Prediction button
+if st.button("Predict Churn"):
+
+    prediction = model.predict(input_data)
+
+    probability = model.predict_proba(input_data)[0][1]
+
+    if prediction[0] == 1:
+        st.error("⚠️ Customer is likely to churn")
+    else:
+        st.success("✅ Customer is likely to stay")
+
+    st.subheader("Churn Probability")
+
+    st.write(round(probability*100,2),"%")
+st.write("Raw probability:", probability)
+
+
+
+
+
+ # Ruff for LR 
+2- LR 
+The prediction of customer churn is an emerging area of interest in the domain of customer relationship management. In a competitive industry like telecommunications, if customers decide not to continue their services, it would cause substantial financial loss for companies. Prediction of customer churn helps companies identify customers who are likely to leave their services and take adequate measures to retain them. In recent times, due to the availability of large customer databases, machine learning is being used for analysis of customer data and prediction of patterns related to customer churn.This chapter reviews existing research related to customer churn prediction, machine learning techniques used for churn analysis, and the evaluation methods applied in previous studies. The aim of this literature review is to understand the current state of research, identify commonly used predictive models, and highlight limitations in existing studies that justify the need for this research (Chang, V et al, 2024).
+
+
+
+
+
+
+# import streamlit as st
+import pandas as pd
+import joblib
+from reportlab.pdfgen import canvas
+import base64
+
+# -----------------------------
+# LOAD MODEL + SCALER
+# -----------------------------
+model = joblib.load("churn_model.pkl")
+scaler = joblib.load("scaler.pkl")   # 👈 ADD THIS LINE
+
+# -----------------------------
+# BACKGROUND IMAGE FUNCTION
+# -----------------------------
+def set_background(image_file):
+
+    with open(image_file, "rb") as file:
+        encoded = base64.b64encode(file.read()).decode()
+
+    page_bg = f"""
+    <style>
+    .stApp {{
+    background-image: url("data:image/jpg;base64,{encoded}");
+    background-size: cover;
+    }}
+    </style>
+    """
+
+    st.markdown(page_bg, unsafe_allow_html=True)
+
+
+set_background("background.jpg")
+
+
+# -----------------------------
+# TITLE
+# -----------------------------
+st.title("Customer Churn Prediction System")
+
+st.write("This application predicts whether a customer is likely to churn.")
+
+
+# -----------------------------
+# PDF FUNCTION
+# -----------------------------
+def create_pdf(tenure, monthly_charges, total_charges, contract, result, probability):
+
+    file_name = "prediction_report.pdf"
+
+    c = canvas.Canvas(file_name)
+
+    c.drawString(100,800,"Customer Churn Prediction Report")
+
+    c.drawString(100,760,f"Tenure: {tenure}")
+    c.drawString(100,740,f"Monthly Charges: {monthly_charges}")
+    c.drawString(100,720,f"Total Charges: {total_charges}")
+    c.drawString(100,700,f"Contract Type: {contract}")
+
+    c.drawString(100,660,f"Prediction Result: {result}")
+    c.drawString(100,640,f"Churn Probability: {round(probability*100,2)} %")
+
+    c.save()
+
+    return file_name
+
+
+# -----------------------------
+# INPUT FORM
+# -----------------------------
+st.header("Enter Customer Information")
+
+with st.form("churn_form"):
+
+    tenure = st.number_input(
+        "Tenure (Months)",
+        min_value=0,
+        max_value=100,
+        value=0,
+        key="tenure"
+    )
+
+    monthly_charges = st.number_input(
+        "Monthly Charges",
+        min_value=0.0,
+        max_value=200.0,
+        value=0.0,
+        key="monthly"
+    )
+
+    total_charges = st.number_input(
+        "Total Charges",
+        min_value=0.0,
+        max_value=10000.0,
+        value=0.0,
+        key="total"
+    )
+
+    senior = st.selectbox(
+        "Senior Citizen",
+        ["No", "Yes"],
+        key="senior"
+    )
+
+    contract = st.selectbox(
+        "Contract Type",
+        ["Month-to-month", "One year", "Two year"],
+        key="contract"
+    )
+
+    predict_button = st.form_submit_button("Predict Churn")
+
+
+# -----------------------------
+# PREDICTION
+# -----------------------------
+# -----------------------------
+# PREDICTION
+# -----------------------------
+if predict_button:
+
+    senior_value = 1 if senior == "Yes" else 0
+    contract_one = 1 if contract == "One year" else 0
+    contract_two = 1 if contract == "Two year" else 0
+
+    data = pd.DataFrame({
+
+        'SeniorCitizen':[senior_value],
+        'tenure':[tenure],
+        'MonthlyCharges':[monthly_charges],
+        'TotalCharges':[total_charges],
+        'gender_Male':[0],
+        'Partner_Yes':[0],
+        'Dependents_Yes':[0],
+        'PhoneService_Yes':[1],
+        'MultipleLines_No phone service':[0],
+        'MultipleLines_Yes':[0],
+        'InternetService_Fiber optic':[0],
+        'InternetService_No':[0],
+        'OnlineSecurity_No internet service':[0],
+        'OnlineSecurity_Yes':[0],
+        'OnlineBackup_No internet service':[0],
+        'OnlineBackup_Yes':[0],
+        'DeviceProtection_No internet service':[0],
+        'DeviceProtection_Yes':[0],
+        'TechSupport_No internet service':[0],
+        'TechSupport_Yes':[0],
+        'StreamingTV_No internet service':[0],
+        'StreamingTV_Yes':[0],
+        'StreamingMovies_No internet service':[0],
+        'StreamingMovies_Yes':[0],
+        'Contract_One year':[contract_one],
+        'Contract_Two year':[contract_two],
+        'PaperlessBilling_Yes':[0],
+        'PaymentMethod_Credit card (automatic)':[0],
+        'PaymentMethod_Electronic check':[0],
+        'PaymentMethod_Mailed check':[0]
+      })
+    
+    # APPLY SCALING
+data_scaled = scaler.transform(data)
+
+# PREDICTION
+prediction = model.predict(data_scaled)[0]
+probability = model.predict_proba(data_scaled)[0][1]
+st.session_state.probability = probability
+  
+st.subheader("Final Result")
+
+if prediction == 1:
+    st.error(f"Customer will CHURN ❌ ({round(probability*100,2)}%)")
+else:
+    st.success(f"Customer will STAY ✅ ({round((1-probability)*100,2)}%)")
+
+st.session_state.probability = probability
+
+st.write("Churn Probability:", round(probability*100,2), "%")
+st.progress(float(probability))
+
+
+
+# -----------------------------
+# -----------------------------
+# PDF DOWNLOAD BUTTON
+# -----------------------------
+if "result" in st.session_state and "probability" in st.session_state:
+
+    pdf_file = create_pdf(
+        tenure,
+        monthly_charges,
+        total_charges,
+        contract,
+        st.session_state.result,
+        st.session_state.probability
+    )
+
+    with open(pdf_file, "rb") as file:
+
+        st.download_button(
+            label="Download Prediction Report (PDF)",
+            data=file,
+            file_name="customer_churn_report.pdf",
+            mime="application/pdf"
+        )
+
+
+    # -----------------------------
+   
+    # -----------------------------
+    # Create PDF file
+
+
+
+
+# -----------------------------
+# CLEAR BUTTON
+# -----------------------------
+if st.button("Clear Inputs"):
+
+    st.session_state.clear()
+    st.rerun()
+
+
+
+
+
+ # Ruff for the app trying on the 26 march 
+import logging
+
+import streamlit as st
+import pandas as pd
+import joblib
+from reportlab.pdfgen import canvas
+import base64
+
+
+import logging
+import os
+
+# create logs folder
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+logging.basicConfig(
+    filename="logs/app.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+# ✅ FORCE log file creation immediately
+logging.info("App started")
+# -----------------------------
+# LOAD MODEL + SCALER
+# -----------------------------
+model = joblib.load("churn_model.pkl")
+scaler = joblib.load("scaler.pkl")
+
+# -----------------------------
+# BACKGROUND IMAGE FUNCTION
+# -----------------------------
+#def set_background(image_file):
+    #with open(image_file, "rb") as file:
+        #encoded = base64.b64encode(file.read()).decode()
+
+    #page_bg = f"""
+    #<style>
+    #.stApp {{
+        #background-image: url("data:image/jpg;base64,{encoded}");
+        #background-size: cover;
+    #}}
+    #</style>
+   # """
+    #st.markdown(page_bg, unsafe_allow_html=True)
+
+#set_background("background.jpg")
+
+# -----------------------------
+# TITLE
+# -----------------------------
+#st.title("Customer Churn Prediction System")
+#st.write("This application predicts whether a customer is likely to churn.")
+
+# -----------------------------
+# PDF FUNCTION
+# -----------------------------
+def create_pdf(tenure, monthly_charges, total_charges, contract, result, probability):
+    file_name = "prediction_report.pdf"
+    c = canvas.Canvas(file_name)
+
+    c.drawString(100,800,"Customer Churn Prediction Report")
+    c.drawString(100,760,f"Tenure: {tenure}")
+    c.drawString(100,740,f"Monthly Charges: {monthly_charges}")
+    c.drawString(100,720,f"Total Charges: {total_charges}")
+    c.drawString(100,700,f"Contract Type: {contract}")
+    c.drawString(100,660,f"Prediction Result: {result}")
+    c.drawString(100,640,f"Churn Probability: {round(probability*100,2)} %")
+
+    c.save()
+    return file_name
+
+# -----------------------------
+# INPUT FORM
+# -----------------------------
+st.header("Enter Customer Information")
+
+with st.form("churn_form"):
+
+    tenure = st.number_input("Tenure (Months)", 0, 100, 0)
+    monthly_charges = st.number_input("Monthly Charges", 0.0, 200.0, 0.0)
+    total_charges = st.number_input("Total Charges", 0.0, 10000.0, 0.0)
+
+    senior = st.selectbox("Senior Citizen", ["No", "Yes"])
+    contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
+
+    predict_button = st.form_submit_button("Predict Churn")
+
+# -----------------------------
+# PREDICTION
+# ------if predict_button:
+
+  # if predict_button:
+
+    try:
+        # -----------------------------
+        # INPUT PROCESSING
+        # -----------------------------
+        senior_value = 1 if senior == "Yes" else 0
+        contract_one = 1 if contract == "One year" else 0
+        contract_two = 1 if contract == "Two year" else 0
+
+        # -----------------------------
+        # CREATE DATAFRAME
+        # -----------------------------
+        data = pd.DataFrame({
+
+            'SeniorCitizen':[senior_value],
+            'tenure':[tenure],
+            'MonthlyCharges':[monthly_charges],
+            'TotalCharges':[total_charges],
+            'gender_Male':[0],
+            'Partner_Yes':[0],
+            'Dependents_Yes':[0],
+            'PhoneService_Yes':[1],
+            'MultipleLines_No phone service':[0],
+            'MultipleLines_Yes':[0],
+            'InternetService_Fiber optic':[0],
+            'InternetService_No':[0],
+            'OnlineSecurity_No internet service':[0],
+            'OnlineSecurity_Yes':[0],
+            'OnlineBackup_No internet service':[0],
+            'OnlineBackup_Yes':[0],
+            'DeviceProtection_No internet service':[0],
+            'DeviceProtection_Yes':[0],
+            'TechSupport_No internet service':[0],
+            'TechSupport_Yes':[0],
+            'StreamingTV_No internet service':[0],
+            'StreamingTV_Yes':[0],
+            'StreamingMovies_No internet service':[0],
+            'StreamingMovies_Yes':[0],
+            'Contract_One year':[contract_one],
+            'Contract_Two year':[contract_two],
+            'PaperlessBilling_Yes':[0],
+            'PaymentMethod_Credit card (automatic)':[0],
+            'PaymentMethod_Electronic check':[0],
+            'PaymentMethod_Mailed check':[0]
+
+        })
+
+        # -----------------------------
+        # SCALING
+        # -----------------------------
+        data_scaled = scaler.transform(data)
+
+        # -----------------------------
+        # PREDICTION
+        # -----------------------------
+        prediction = model.predict(data_scaled)[0]
+        probability = model.predict_proba(data_scaled)[0][1]
+
+        # -----------------------------
+        # LOGGING
+        # -----------------------------
+        logging.info(f"Prediction: {prediction}, Probability: {probability}")
+
+        # -----------------------------
+        # RESULT DISPLAY
+        # -----------------------------
+        if prediction == 1:
+           st.session_state.result = "Customer is likely to CHURN ❌"
+           st.error(st.session_state.result)
+        else:
+            st.session_state.result = "Customer is likely to STAY ✅"
+            st.success(st.session_state.result)
+
+        st.session_state.probability = probability
+
+        st.write("Churn Probability:", round(probability*100,2), "%")
+        st.progress(float(probability))
+
+    except Exception as e:
+
+        logging.error(f"Error occurred: {str(e)}")
+        st.error(f"Error: {str(e)}")
+
+    # PREDICT
+    prediction = model.predict(data_scaled)[0]
+    probability = model.predict_proba(data_scaled)[0][1]
+    logging.info(f"Prediction made: {prediction}, Probability: {probability}")
+
+    # STORE RESULT
+  #  if prediction == 1:
+    ##   st.error(st.session_state.result)
+   # else:
+    #    st.session_state.result = "Customer is likely to STAY ✅"
+    #    st.success(st.session_state.result)
+
+    #st.session_state.probability = probability
+
+    #st.write("Churn Probability:", round(probability*100,2), "%")
+    #st.progress(float(probability))
+
+# -----------------------------
+# PDF DOWNLOAD BUTTON
+# -----------------------------
+if "result" in st.session_state:
+
+    pdf_file = create_pdf(
+        tenure,
+        monthly_charges,
+        total_charges,
+        contract,
+        st.session_state.result,
+        st.session_state.probability
+    )
+
+    with open(pdf_file, "rb") as file:
+        st.download_button(
+            label="Download Prediction Report (PDF)",
+            data=file,
+            file_name="customer_churn_report.pdf",
+            mime="application/pdf"
+        )
+
+# -----------------------------
+# CLEAR BUTTON
+# -----------------------------
+if st.button("Clear Inputs"):
+    st.session_state.clear()
+    st.rerun()
