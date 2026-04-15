@@ -36,7 +36,7 @@ if "form_key" not in st.session_state:
 model = joblib.load("churn_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
-# ✅ IMPORTANT (fix feature mismatch)
+#  (fix feature mismatch)
 feature_names = scaler.feature_names_in_
 
 # -----------------------------
@@ -183,7 +183,7 @@ if predict_button:
         with c2:
             st.metric("Status", "Churn" if prediction==1 else "Safe")
 
-        result = "CHURN ❌" if prediction==1 else "STAY ✅"
+        result = "CHURN " if prediction==1 else "STAY "
 
         st.write(result)
         st.progress(float(probability))
@@ -224,7 +224,7 @@ if "result" in st.session_state:
             mime="application/pdf"
         )
 
-    st.success("PDF saved in app folder ✅")
+    st.success("PDF saved in app folder")
 
 # -----------------------------
 # EXPLANATION

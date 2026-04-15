@@ -249,3 +249,7 @@ Feature names seen at fit time, yet now missing:
 2026-04-02 22:42:28,296 - INFO - Prediction: 0, Probability: 0.26907487891442183
 2026-04-02 22:42:44,372 - INFO - Prediction: 0, Probability: 0.34270224587390635
 2026-04-06 10:46:36,623 - INFO - Prediction: 1, Probability: 0.6067875784371489
+2026-04-15 10:05:03,348 - INFO - Prediction: 0, Probability: 0.12877112928828485
+2026-04-15 10:45:52,976 - INFO - Prediction: 0, Probability: 0.11687145754809887
+2026-04-15 10:46:32,597 - INFO - Prediction: 0, Probability: 0.3608439040651116
+2026-04-15 10:53:54,335 - INFO - Prediction: 0, Probability: 0.044742214942036486
